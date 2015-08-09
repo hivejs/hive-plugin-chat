@@ -1,0 +1,31 @@
+{
+  "name": "hive-plugin-chat",
+  "version": "0.0.1",
+  "description": "Chat plugin for hive.js",
+  "main": "index.js",
+  "dependencies": {
+    "through2": "2.x"
+  , "json-stream": "1.x"
+  , "json-stringify-stream": "0.0.x"
+  , "duplexify": "3.x"
+  , "co":"4.x"
+  , "virtual-dom": "2.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hivejs/hive-plugin-chat.git"
+  },
+  "keywords": [
+    "hivejs",
+    "hive.js"
+  ],
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "license": {"license": "GPL-3.0"},
+  "bugs": {
+    "url": "https://github.com/hivejs/hive-plugin-chat/issues"
+  },
+  "homepage": "https://github.com/hivejs/hive-plugin-chat"
+}

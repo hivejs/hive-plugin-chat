@@ -1,0 +1,29 @@
+.Chat {
+  float: right;
+  height: 100%;
+  width: 20%;
+  min-width: 5cm;
+  max-width: 15cm;
+  position: relative;
+}
+
+.Chat__messages {
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  bottom: 2em;
+  width: 100%;
+  padding: .5em;
+}
+
+.Chat__Interface {
+  position: absolute;
+  bottom:0;
+}
+
+#editor {
+  margin-right: 20%;
+  /* This should have a min-margin-right: 5cm
+     see http://buildinternet.com/2009/10/purely-css-faking-minimum-margins/
+   */
+}
