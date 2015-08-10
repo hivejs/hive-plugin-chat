@@ -10,8 +10,8 @@
 .Chat__messages {
   overflow-y: scroll;
   position: absolute;
-  top: 0;
-  bottom: 2em;
+  top: 34px;
+  bottom: 34px;/*The height of bootstrap's .form-control*/
   width: 100%;
   padding: .2cm;
 }
