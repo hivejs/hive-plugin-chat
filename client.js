@@ -102,11 +102,15 @@ function renderInterface(cb) {
         }
       }})
     ]),
-    h('input.btn.btn-default', {attributes:{type:'submit', value: 'send'}, 'ev-click': function(evt) {
-      var input = evt.currentTarget.previousSibling
-      cb(null, input.value)
-      input.value = ''
-    }})
+    h('input.btn.btn-default', {
+      attributes:{type:'submit', value: 'send'}
+    , 'ev-click': function(evt) {
+        evt.preventDefault()
+        var input = evt.currentTarget.previousSibling
+        cb(null, input.value)
+        input.value = ''
+      }
+    })
   ])
 }
 
