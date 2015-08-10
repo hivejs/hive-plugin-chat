@@ -46,6 +46,8 @@ function setup(plugin, imports, register) {
     container.setAttribute('class', 'Chat')
     document.body.insertBefore(container, document.body.firstChild)
 
+    container.appendChild(vdom.create(renderHeader()))
+
     var messages = document.createElement('div')
     messages.setAttribute('class', 'Chat__messages')
     container.appendChild(messages)
@@ -80,6 +82,10 @@ function setup(plugin, imports, register) {
   })
 
   register()
+}
+
+function renderHeader() {
+  return h('h5', ['Chat ', h('small', 'discuss and inspire') ])
 }
 
 function renderInterface(cb) {
