@@ -108,7 +108,7 @@ function renderInterface(cb) {
         }
       }})
     ]),
-    h('input.btn.btn-default', {
+    h('input.btn.btn-default.hidden-md.hidden-lg', {
       attributes:{type:'submit', value: 'send'}
     , 'ev-click': function(evt) {
         evt.preventDefault()

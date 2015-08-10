@@ -19,6 +19,14 @@
 .Chat__Interface {
   position: absolute;
   bottom:0;
+  width:100%;
+}
+
+@media (min-width: 992px) {
+  /*On larger screens the send button is hidden, so we can use the full width*/
+  .Chat__Interface .input-group {
+    width:100%;
+  }
 }
 
 #editor {
