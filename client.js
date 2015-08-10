@@ -83,15 +83,26 @@ function setup(plugin, imports, register) {
 }
 
 function renderInterface(cb) {
-  return h('div.Chat__Interface', [
-    h('input', {attributes:{type:'text'}, 'ev-keydown': function(evt) {
-      if(evt.keyCode == 13) {
-        var input = evt.currentTarget
-        cb(null, input.value)
-        input.value = ''
-      }
-    }}),
-    h('input', {attributes:{type:'button', value: 'send'}, 'ev-click': function(evt) {
+  return h('form.form-inline.Chat__Interface', [
+    h('div.input-group',[
+      h('span.input-group-addon', [
+        h('i.glyphicon-comment'),
+        h('label.sr-only', {attributes:{for: 'message'}}, 'Chat message')
+      ]),
+      h('input.form-control', {attributes:{
+          type:'text'
+        , name: 'message'
+        , placeholder: 'Chat message'
+        },
+        'ev-keydown': function(evt) {
+        if(evt.keyCode == 13) {
+          var input = evt.currentTarget
+          cb(null, input.value)
+          input.value = ''
+        }
+      }})
+    ]),
+    h('input.btn.btn-default', {attributes:{type:'submit', value: 'send'}, 'ev-click': function(evt) {
       var input = evt.currentTarget.previousSibling
       cb(null, input.value)
       input.value = ''
