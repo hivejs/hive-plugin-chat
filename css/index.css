@@ -5,6 +5,42 @@
   min-width: 5cm;
   max-width: 15cm;
   position: relative;
+  background: #fff;
+}
+
+.Chat--small {
+  float:none;
+  position:absolute;
+  bottom:0;
+  right:.5cm;
+  height:10cm;
+  border:1px solid #777;
+  border-radius:.3cm;
+}
+
+.Chat--minimized {
+  float:none;
+  position:absolute;
+  bottom:0;
+  right:.5cm;
+  height: auto;
+  border:1px solid #777;
+  border-radius:.3cm;
+}
+.Chat--minimized .Chat__Interface,
+.Chat--minimized .Chat__messages,
+.Chat--minimized .Chat__header small {
+  display:none;
+}
+
+.Chat__header {
+  padding: 0 .2cm;
+}
+
+.Chat__header__controls {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .Chat__messages {
@@ -34,4 +70,9 @@
   /* This should have a min-margin-right: 5cm
      see http://buildinternet.com/2009/10/purely-css-faking-minimum-margins/
    */
+}
+
+.Chat--minimized ~ #editor,
+.Chat--small ~ #editor {
+  margin-right:0;
 }

@@ -85,16 +85,42 @@ function setup(plugin, imports, register) {
 }
 
 function renderHeader() {
-  return h('h5', ['Chat ', h('small', 'discuss and inspire') ])
+  return h('div.Chat__header', [
+    h('div.Chat__header__controls', [
+      h('a.btn.glyphicon-minus', {
+        attributes: {'aria-label':'Minimize chat window'}
+      , 'ev-click': function() {
+        var Chat = document.querySelector('.Chat')
+        Chat.classList.add('Chat--minimized')
+        Chat.classList.remove('Chat--small')
+      }})
+    , h('a.btn.glyphicon-resize-small', {
+        attributes: {'aria-label':'Resize chat window to medium size'}
+      , 'ev-click': function() {
+        var Chat = document.querySelector('.Chat')
+        Chat.classList.remove('Chat--minimized')
+        Chat.classList.add('Chat--small')
+      }})
+    , h('a.btn.glyphicon-resize-full', {
+        attributes: {'aria-label':'Resize chat window to full size'}
+      , 'ev-click': function() {
+        var Chat = document.querySelector('.Chat')
+        Chat.classList.remove('Chat--minimized')
+        Chat.classList.remove('Chat--small')
+      }})
+    ])
+  , h('h5', [
+      h('i.glyphicon-comment')
+    , ' Chat '
+    , h('small', 'discuss and inspire')
+    ])
+  ])
 }
 
 function renderInterface(cb) {
   return h('form.form-inline.Chat__Interface', [
     h('div.input-group',[
-      h('span.input-group-addon', [
-        h('i.glyphicon-comment'),
-        h('label.sr-only', {attributes:{for: 'message'}}, 'Chat message')
-      ]),
+      h('label.sr-only', {attributes:{for: 'message'}}, 'Chat message'),
       h('input.form-control', {attributes:{
           type:'text'
         , name: 'message'
