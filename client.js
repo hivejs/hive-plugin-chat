@@ -86,7 +86,7 @@ function setup(plugin, imports, register) {
 
 function renderHeader() {
   return h('div.Chat__header', [
-    h('div.Chat__header__controls', [
+    h('div.btn-group.Chat__header__controls', [
       h('a.btn.glyphicon-minus', {
         attributes: {'aria-label':'Minimize chat window'}
       , 'ev-click': function() {
