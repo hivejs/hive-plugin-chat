@@ -25,6 +25,9 @@
   .Chat .glyphicon-resize-full {
     display:none;
   }
+  .Chat__messages {
+    bottom: calc(2 * 34px) !important;
+  }
 }
 
 .Chat--small {
