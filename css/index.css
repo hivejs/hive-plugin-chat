@@ -8,6 +8,25 @@
   background: #fff;
 }
 
+@media (max-width: 991px) {
+  .Chat {
+    float:none;
+    position:absolute;
+    bottom:0;
+    right:.5cm;
+    height:10cm;
+    border:1px solid #777;
+    border-radius:.3cm;
+    width:7.5cm;
+  }
+  .Chat ~ #editor {
+    margin-right:0;
+  }
+  .Chat .glyphicon-resize-full {
+    display:none;
+  }
+}
+
 .Chat--small {
   float:none;
   position:absolute;
