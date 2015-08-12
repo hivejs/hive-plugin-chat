@@ -87,21 +87,21 @@ function setup(plugin, imports, register) {
 function renderHeader() {
   return h('div.Chat__header', [
     h('div.btn-group.Chat__header__controls', [
-      h('a.btn.glyphicon-minus', {
+      h('a.btn.glyphicon.glyphicon-minus', {
         attributes: {'aria-label':'Minimize chat window'}
       , 'ev-click': function() {
         var Chat = document.querySelector('.Chat')
         Chat.classList.add('Chat--minimized')
         Chat.classList.remove('Chat--small')
       }})
-    , h('a.btn.glyphicon-resize-small', {
+    , h('a.btn.glyphicon.glyphicon-resize-small', {
         attributes: {'aria-label':'Resize chat window to medium size'}
       , 'ev-click': function() {
         var Chat = document.querySelector('.Chat')
         Chat.classList.remove('Chat--minimized')
         Chat.classList.add('Chat--small')
       }})
-    , h('a.btn.glyphicon-resize-full', {
+    , h('a.btn.glyphicon.glyphicon-resize-full', {
         attributes: {'aria-label':'Resize chat window to full size'}
       , 'ev-click': function() {
         var Chat = document.querySelector('.Chat')
@@ -110,7 +110,7 @@ function renderHeader() {
       }})
     ])
   , h('h5', [
-      h('i.glyphicon-comment')
+      h('i.glyphicon.glyphicon-comment')
     , ' Chat '
     , h('small', 'discuss and inspire')
     ])
