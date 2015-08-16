@@ -46,7 +46,19 @@ function setup(plugin, imports, register) {
     container.setAttribute('class', 'Chat')
     document.body.insertBefore(container, document.body.firstChild)
 
-    container.appendChild(vdom.create(renderHeader()))
+    // set window size according to user's settings
+    //try {
+      var windowSize = ctx.settings.get('plugin-chat:window')
+      switch(windowSize) {
+        case 'minimized':
+          container.classList.add('Chat--minimized')
+          break;
+        case 'full':
+          break;
+      }
+    //}catch(e) {}
+
+    container.appendChild(vdom.create(renderHeader(ctx)))
 
     var messages = document.createElement('div')
     messages.setAttribute('class', 'Chat__messages')
@@ -84,7 +96,7 @@ function setup(plugin, imports, register) {
   register()
 }
 
-function renderHeader() {
+function renderHeader(ctx) {
   return h('div.Chat__header', [
     h('div.btn-group.Chat__header__controls', [
       h('a.btn.glyphicon.glyphicon-minus', {
@@ -93,13 +105,7 @@ function renderHeader() {
         var Chat = document.querySelector('.Chat')
         Chat.classList.add('Chat--minimized')
         Chat.classList.remove('Chat--small')
-      }})
-    , h('a.btn.glyphicon.glyphicon-resize-small', {
-        attributes: {'aria-label':'Resize chat window to medium size'}
-      , 'ev-click': function() {
-        var Chat = document.querySelector('.Chat')
-        Chat.classList.remove('Chat--minimized')
-        Chat.classList.add('Chat--small')
+        ctx.settings.set('plugin-chat:window', 'minimized')
       }})
     , h('a.btn.glyphicon.glyphicon-resize-full', {
         attributes: {'aria-label':'Resize chat window to full size'}
@@ -107,6 +113,7 @@ function renderHeader() {
         var Chat = document.querySelector('.Chat')
         Chat.classList.remove('Chat--minimized')
         Chat.classList.remove('Chat--small')
+        ctx.settings.set('plugin-chat:window', 'full')
       }})
     ])
   , h('h5', [
