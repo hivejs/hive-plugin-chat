@@ -107,8 +107,8 @@ function renderHeader(ctx) {
         Chat.classList.remove('Chat--small')
         ctx.settings.set('plugin-chat:window', 'minimized')
       }})
-    , h('a.btn.glyphicon.glyphicon-resize-full', {
-        attributes: {'aria-label':'Resize chat window to full size'}
+    , h('a.btn.glyphicon.glyphicon-pushpin', {
+        attributes: {'aria-label':'Keep chat window open'}
       , 'ev-click': function() {
         var Chat = document.querySelector('.Chat')
         Chat.classList.remove('Chat--minimized')

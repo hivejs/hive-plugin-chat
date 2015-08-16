@@ -8,7 +8,7 @@
   background: #fff;
 }
 
-.Chat .glyphicon-resize-full {
+.Chat .glyphicon-pushpin {
   display:none;
 }
 
@@ -48,7 +48,7 @@
 .Chat--minimized .glyphicon-minus{
   display:none;
 }
-.Chat--minimized .glyphicon-resize-full {
+.Chat--minimized .glyphicon-pushpin {
   display: inline-block;
 }
 
