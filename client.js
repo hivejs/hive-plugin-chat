@@ -47,16 +47,14 @@ function setup(plugin, imports, register) {
     document.body.insertBefore(container, document.body.firstChild)
 
     // set window size according to user's settings
-    //try {
-      var windowSize = ctx.settings.get('plugin-chat:window')
-      switch(windowSize) {
-        case 'minimized':
-          container.classList.add('Chat--minimized')
-          break;
-        case 'full':
-          break;
-      }
-    //}catch(e) {}
+    var windowSize = ctx.user.getSetting('plugin-chat:window')
+    switch(windowSize) {
+      case 'minimized':
+        container.classList.add('Chat--minimized')
+        break;
+      case 'full':
+        break;
+    }
 
     container.appendChild(vdom.create(renderHeader(ctx)))
 
@@ -105,7 +103,7 @@ function renderHeader(ctx) {
         var Chat = document.querySelector('.Chat')
         Chat.classList.add('Chat--minimized')
         Chat.classList.remove('Chat--small')
-        ctx.settings.set('plugin-chat:window', 'minimized')
+        ctx.user.setSetting('plugin-chat:window', 'minimized')
       }})
     , h('a.btn.glyphicon.glyphicon-pushpin', {
         attributes: {'aria-label':'Keep chat window open'}
@@ -113,7 +111,7 @@ function renderHeader(ctx) {
         var Chat = document.querySelector('.Chat')
         Chat.classList.remove('Chat--minimized')
         Chat.classList.remove('Chat--small')
-        ctx.settings.set('plugin-chat:window', 'full')
+        ctx.user.setSetting('plugin-chat:window', 'full')
       }})
     ])
   , h('h5', [
