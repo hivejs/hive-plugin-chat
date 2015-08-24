@@ -29,10 +29,10 @@ function setup(plugin, imports, register) {
 
   var link = document.createElement('link')
   link.setAttribute('rel', 'stylesheet')
-  link.setAttribute('href', 'static/hive-plugin-chat/css/index.css')
+  link.setAttribute('href', ui.baseURL+'/static/hive-plugin-chat/css/index.css')
   document.head.appendChild(link)
 
-  ui.page('/:id',
+  ui.page('/documents/:id',
   function loadClient(ctx, next) {
     // Set up the chat broadcast
     var writable = jsonStringify()
