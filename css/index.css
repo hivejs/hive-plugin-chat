@@ -31,6 +31,19 @@
   }
 }
 
+@media (max-width: 772px) {
+  .Chat--minimized {
+    width: 2cm;
+    min-width: 0;
+  }
+  .Chat--minimized .Chat__header__controls {
+    display: none;
+  }
+  .Chat--minimized:hover {
+    width: 7.5cm;
+  }
+}
+
 .Chat--minimized {
   float:none;
   position:absolute;
