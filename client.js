@@ -91,7 +91,7 @@ function setup(plugin, imports, register) {
 
       // inject into page
       ui.state.events['ui:renderBody'].listen(function(state, children) {
-        children.push(render(state))
+        children.unshift(render(state))
       })
 
     })
