@@ -107,7 +107,8 @@
   width:100%;
 }
 
-#editor {
+.Chat ~ #editor {
+  float: left;
   margin-right: 20%;
   /* This should have a min-margin-right: 5cm
      see http://buildinternet.com/2009/10/purely-css-faking-minimum-margins/
