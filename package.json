@@ -9,7 +9,11 @@
     "json-stringify-stream": "0.0.x",
     "duplexify": "3.x",
     "co": "4.x",
-    "virtual-dom": "2.x"
+    "virtual-dom": "2.x",
+    "observ-varhash": "1.x",
+    "observ-emitter": "1.x",
+    "observ-struct": "6.x",
+    "observ-array": "3.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

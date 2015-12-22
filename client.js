@@ -18,75 +18,83 @@
 var jsonParse = require('json-stream')
   , through = require('through2')
   , duplexify = require('duplexify')
-  , co = require('co')
   , vdom = require('virtual-dom')
   , h = vdom.h
+  , ObservVarhash = require('observ-varhash')
+  , ObservStruct = require('observ-struct')
+  , ObservEmitter = require('observ-emitter')
+  , ObservArray = require('observ-array')
 
 module.exports = setup
-module.exports.consumes = ['ui', 'editor']
+module.exports.consumes = ['ui', 'editor', 'models', 'hooks']
 function setup(plugin, imports, register) {
   var ui = imports.ui
+    , models= imports.models
+    , hooks = imports.hooks
 
-  var link = document.createElement('link')
-  link.setAttribute('rel', 'stylesheet')
-  link.setAttribute('href', ui.baseURL+'/static/hive-plugin-chat/css/index.css')
-  document.head.appendChild(link)
+  hooks.on('ui:initState', function*() {
+    ui.state.events.put('chat:createMessage', ObservEmitter())
+    ui.state.events.put('chat:minimize', ObservEmitter())
+    ui.state.events.put('chat:maximize', ObservEmitter())
+  })
 
   ui.page('/documents/:id',
   function loadClient(ctx, next) {
-    // Set up the chat broadcast
-    var writable = jsonStringify()
-      , readable = jsonParse()
-    var chat = duplexify.obj(writable, readable)
-      , broadcast = ctx.broadcast.createDuplexStream(new Buffer('chat'))
-    writable.pipe(broadcast).pipe(readable)
-
-    // Add the chat container to the screen
-    var container = document.createElement('div')
-    container.setAttribute('class', 'Chat')
-    document.body.insertBefore(container, document.body.firstChild)
-
-    // set window size according to user's settings
-    var windowSize = ctx.user.getSetting('plugin-chat:window')
-    switch(windowSize) {
-      case 'minimized':
-        container.classList.add('Chat--minimized')
-        break;
-      case 'full':
-        break;
+    if(!ui.state.user.getSetting('chat:windowSize')) {
+      ui.state.user.setSetting('chat:windowSize', 'full')
     }
 
-    container.appendChild(vdom.create(renderHeader(ctx)))
+    ui.state.events['editor:load'].listen(function() {
+      // Set up the chat broadcast
+      var writable = jsonStringify()
+        , readable = jsonParse()
+      var chat = duplexify.obj(writable, readable)
+        , broadcast = ctx.broadcast.createDuplexStream(new Buffer('chat'))
+      writable.pipe(broadcast).pipe(readable)
 
-    var messages = document.createElement('div')
-    messages.setAttribute('class', 'Chat__messages')
-    container.appendChild(messages)
+      // set up state
+      ui.state.put('chat', ObservStruct({
+        messages: ObservArray([])
+      , users: ObservVarhash()
+      }))
+      var state = ui.state.chat
 
-    // Display new chat messages
-    chat.on('readable', function() {
-      co(function*() {
-        var msg
-        while(msg = chat.read()) {
-          messages.appendChild(vdom.create(yield renderChatMessage(ctx, msg)))
-        }
-        scroll()
-      }).then(function(){})
-    })
+      state.users.put(ui.state.user.get('id'), ui.state.user)
 
-    // Send and display new messages
-    container.appendChild(vdom.create(renderInterface(function(er, text) {
-      co(function*() {
-        if(!text) return
-        var msg = {text: text, user: ctx.user.id}
+      // Display new chat messages
+      chat.on('readable', function() {
+          var msg
+          while(msg = chat.read()) {
+            state.messages.push(msg)
+            // Check whether the user is known
+            if(!state.users[msg.user]) {
+              var user = new ctx.models.user({id: msg.user})
+              state.users.put(msg.user, models.toObserv(user))
+              user.fetch()
+            }
+          }
+      })
+
+      ui.state.events['chat:minimize'].listen(function() {
+        ui.state.user.setSetting('chat:windowSize', 'minimized')
+      })
+
+      ui.state.events['chat:maximize'].listen(function() {
+        ui.state.user.setSetting('chat:windowSize', 'full')
+      })
+
+      ui.state.events['chat:createMessage'].listen(function(text) {
+        var msg = {text: text, user: ui.state.user.get('id')}
         chat.write(msg)
-        messages.appendChild(vdom.create(yield renderChatMessage(ctx, msg)))
-        scroll()
-      }).then(function(){})
-    })))
+        state.messages.push(msg)
+      })
 
-    function scroll() {
-      messages.scrollTop = messages.clientHeight
-    }
+      // inject into page
+      ui.state.events['ui:renderBody'].listen(function(state, children) {
+        children.push(render(state))
+      })
+
+    })
 
     next()
   })
@@ -94,25 +102,28 @@ function setup(plugin, imports, register) {
   register()
 }
 
-function renderHeader(ctx) {
+function render(state) {
+  // set window size according to user's settings
+  var windowSize = state.user.settings.chat.windowSize == 'minimized'?
+    '.Chat--minimized' : ''
+  return h('div.Chat'+windowSize, [
+    renderHeader(state)
+  , renderMessages(state)
+  , renderInterface(state)
+  ])
+}
+
+function renderHeader(state) {
   return h('div.Chat__header', [
     h('div.btn-group.Chat__header__controls', [
       h('a.btn.glyphicon.glyphicon-minus', {
         attributes: {'aria-label':'Minimize chat window'}
-      , 'ev-click': function() {
-        var Chat = document.querySelector('.Chat')
-        Chat.classList.add('Chat--minimized')
-        Chat.classList.remove('Chat--small')
-        ctx.user.setSetting('plugin-chat:window', 'minimized')
-      }})
+      , 'ev-click': state.events['chat:minimize']
+      })
     , h('a.btn.glyphicon.glyphicon-pushpin', {
         attributes: {'aria-label':'Keep chat window open'}
-      , 'ev-click': function() {
-        var Chat = document.querySelector('.Chat')
-        Chat.classList.remove('Chat--minimized')
-        Chat.classList.remove('Chat--small')
-        ctx.user.setSetting('plugin-chat:window', 'full')
-      }})
+      , 'ev-click': state.events['chat:maximize']
+      })
     ])
   , h('h5', [
       h('i.glyphicon.glyphicon-comment')
@@ -122,7 +133,7 @@ function renderHeader(ctx) {
   ])
 }
 
-function renderInterface(cb) {
+function renderInterface(state) {
   return h('form.form-inline.Chat__Interface', [
     h('div.input-group',[
       h('label.sr-only', {attributes:{for: 'message'}}, 'Chat message'),
@@ -133,9 +144,8 @@ function renderInterface(cb) {
         },
         'ev-keydown': function(evt) {
         if(evt.keyCode == 13) {
-          var input = evt.currentTarget
-          cb(null, input.value)
-          input.value = ''
+          evt.preventDefault()
+          state.events['chat:createMessage'](evt.currentTarget.value)
         }
       }})
     ]),
@@ -143,20 +153,33 @@ function renderInterface(cb) {
       attributes:{type:'submit', value: 'send'}
     , 'ev-click': function(evt) {
         evt.preventDefault()
-        var input = evt.currentTarget.previousSibling
-        cb(null, input.value)
-        input.value = ''
+        state.events['chat:createMessage'](evt.currentTarget.previousSibling.value)
       }
     })
   ])
 }
 
-function* renderChatMessage(ctx, msg) {
+function renderMessages(state) {
+  return h('div.Chat__messages', {
+    scrollTop: new ScrollHook(state.chat.scrollTop)
+  },
+  state.chat.messages.map(function(msg) {
+    return renderMessage(state, msg)
+  })
+  )
+}
+
+function ScrollHook() { }
+ScrollHook.prototype.hook = function(node, propName, prevVal) {
+  var viewportHeight = node.getBoundingClientRect().height
+  if(prevVal < node.clientHeight-viewportHeight) return
+  node.scrollTop = node.clientHeight
+}
+
+function renderMessage(state, msg) {
   return h('div.Chat__Message', {attributes:{'data-user': msg.user}}, [
-    h('span.Chat__Message__User', (yield function(cb) {
-      ctx.client.user.get(msg.user, cb)
-    }).name+': '),
-    h('span.Chat__Message__Text', msg.text)
+    h('span.Chat__Message__User', state.chat.users[msg.user].name)
+  , h('span.Chat__Message__Text', msg.text)
   ])
 }
 

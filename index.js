@@ -29,7 +29,7 @@ function setup(plugin, imports, register) {
     , auth = imports.auth
 
   assets.registerModule(path.join(__dirname, 'client.js'))
-  assets.registerStaticDir(path.join(__dirname, 'css'))
+  assets.registerStylesheet(path.join(__dirname, 'css/index.css'))
 
   broadcast.registerChannel(new Buffer('chat'), function(user, docId, clientStream, broadcastStream) {
     // Authorize chat:write
