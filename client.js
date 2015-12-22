@@ -179,6 +179,7 @@ ScrollHook.prototype.hook = function(node, propName, prevVal) {
 function renderMessage(state, msg) {
   return h('div.Chat__Message', {attributes:{'data-user': msg.user}}, [
     h('span.Chat__Message__User', state.chat.users[msg.user].name)
+  , ': '
   , h('span.Chat__Message__Text', msg.text)
   ])
 }
