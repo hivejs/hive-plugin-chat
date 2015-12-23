@@ -24,9 +24,6 @@
     width:7.5cm;
     z-index: 10; /*for good measure, codemirror uses z-index up to 2*/
   }
-  .Chat ~ #editor {
-    margin-right:0;
-  }
   .Chat__messages {
     bottom: calc(2 * 34px) !important;
   }
@@ -105,14 +102,6 @@
 
 .Chat__Interface .input-group {
   width:100%;
-}
-
-.Chat ~ #editor {
-  float: left;
-  margin-right: 20%;
-  /* This should have a min-margin-right: 5cm
-     see http://buildinternet.com/2009/10/purely-css-faking-minimum-margins/
-   */
 }
 
 .Chat--minimized ~ #editor,
