@@ -77,10 +77,12 @@ function setup(plugin, imports, register) {
 
       ui.state.events['chat:minimize'].listen(function() {
         ui.state.user.setSetting('chat:windowSize', 'minimized')
+        ui.state.user.save()
       })
 
       ui.state.events['chat:maximize'].listen(function() {
         ui.state.user.setSetting('chat:windowSize', 'full')
+        ui.state.user.save()
       })
 
       ui.state.events['chat:createMessage'].listen(function(text) {
@@ -146,6 +148,7 @@ function renderInterface(state) {
         if(evt.keyCode == 13) {
           evt.preventDefault()
           state.events['chat:createMessage'](evt.currentTarget.value)
+          evt.currentTarget.value = ''
         }
       }})
     ]),
@@ -154,6 +157,7 @@ function renderInterface(state) {
     , 'ev-click': function(evt) {
         evt.preventDefault()
         state.events['chat:createMessage'](evt.currentTarget.previousSibling.value)
+        evt.currentTarget.previousSibling.value = ''
       }
     })
   ])
