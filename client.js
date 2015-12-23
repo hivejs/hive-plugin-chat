@@ -24,6 +24,7 @@ var jsonParse = require('json-stream')
   , ObservStruct = require('observ-struct')
   , ObservEmitter = require('observ-emitter')
   , ObservArray = require('observ-array')
+  , co = require('co')
 
 module.exports = setup
 module.exports.consumes = ['ui', 'editor', 'models', 'hooks']
@@ -63,16 +64,25 @@ function setup(plugin, imports, register) {
 
       // Display new chat messages
       chat.on('readable', function() {
+        co(function*() {
           var msg
           while(msg = chat.read()) {
-            state.messages.push(msg)
             // Check whether the user is known
             if(!state.users[msg.user]) {
               var user = new ctx.models.user({id: msg.user})
               state.users.put(msg.user, models.toObserv(user))
-              user.fetch()
+
+              yield function(cb) {
+                user.fetch({
+                  success: function(){cb()}
+                , error: function(m, resp){cb(new Error('Server returned '+resp.status))}
+                })
+              }
             }
+            // push the message
+            state.messages.push(msg)
           }
+        }).then(function() {}, function(er) {throw er})
       })
 
       ui.state.events['chat:minimize'].listen(function() {
