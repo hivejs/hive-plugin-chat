@@ -192,11 +192,19 @@ function setup(plugin, imports, register) {
     )
   }
 
-  function ScrollHook() { }
-  ScrollHook.prototype.hook = function(node, propName, prevVal) {
-    var viewportHeight = node.getBoundingClientRect().height
-    if(prevVal < node.clientHeight-viewportHeight) return
-    node.scrollTop = node.clientHeight
+  function ScrollHook() {
+    this.scrollHeight
+  }
+  ScrollHook.prototype.hook = function(node, propName, previous) {
+    if(previous && node.scrollTop < previous.scrollHeight-node.clientHeight) {
+      this.scrollHeight = node.scrollHeight
+      return
+    }else{
+      this.scrollHeight = node.scrollHeight
+      setImmediate(function() {
+        node.scrollTop = node.scrollHeight-node.clientHeight
+      })
+    }
   }
 
   function renderMessage(state, msg) {
