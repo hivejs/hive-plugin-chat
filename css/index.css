@@ -50,6 +50,7 @@
   height: auto;
   border:1px solid #777;
   border-radius:.3cm;
+  z-index:2;
 }
 .Chat--minimized .Chat__Interface,
 .Chat--minimized .Chat__messages,
@@ -102,9 +103,4 @@
 
 .Chat__Interface .input-group {
   width:100%;
-}
-
-.Chat--minimized ~ #editor,
-.Chat--small ~ #editor {
-  margin-right:0;
 }
