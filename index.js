@@ -21,15 +21,15 @@ var path = require('path')
   , JSONParse = require('json-stream')
 
 module.exports = setup
-module.exports.consumes = ['assets', 'broadcast', 'auth', 'ui']
+module.exports.consumes = ['ui', 'broadcast', 'auth']
 
 function setup(plugin, imports, register) {
-  var assets = imports.assets
+  var ui = imports.ui
     , broadcast = imports.broadcast
     , auth = imports.auth
 
-  assets.registerModule(path.join(__dirname, 'client.js'))
-  assets.registerStylesheet(path.join(__dirname, 'css/index.css'))
+  ui.registerModule(path.join(__dirname, 'client.js'))
+  ui.registerStylesheet(path.join(__dirname, 'css/index.css'))
 
   broadcast.registerChannel(new Buffer('chat'), function(user, docId, clientStream, broadcastStream) {
     // Authorize chat:write
