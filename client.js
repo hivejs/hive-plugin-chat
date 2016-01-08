@@ -23,6 +23,7 @@ var jsonParse = require('json-stream')
 
 module.exports = setup
 module.exports.consumes = ['ui', 'editor', 'api']
+module.exports.provides = ['chat']
 function setup(plugin, imports, register) {
   var ui = imports.ui
     , editor = imports.editor
@@ -215,7 +216,7 @@ function setup(plugin, imports, register) {
     ])
   }
 
-  register()
+  register(null, {chat})
 }
 
 
