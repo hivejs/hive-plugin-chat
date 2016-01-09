@@ -22,12 +22,13 @@ var jsonParse = require('json-stream')
   , h = vdom.h
 
 module.exports = setup
-module.exports.consumes = ['ui', 'editor', 'api']
+module.exports.consumes = ['ui', 'editor', 'api', 'settings']
 module.exports.provides = ['chat']
 function setup(plugin, imports, register) {
   var ui = imports.ui
     , editor = imports.editor
     , api = imports.api
+    , settings = imports.settings
 
   ui.reduxReducerMap.chat = reducer
 
@@ -66,8 +67,11 @@ function setup(plugin, imports, register) {
   , action_addMessage: function(msg) {
       return {type: 'CHAT_ADD_MESSAGE', payload: msg}
     }
-  , action_resize: function(size) {
-      return {type: 'CHAT_RESIZE', payload: size}
+  , action_resize: function*(size) {
+      return yield [
+        {type: 'CHAT_RESIZE', payload: size}
+      , settings.action_setForUser({'chat:windowSize': size})
+      ]
     }
   , action_loadUser: function*(userId) {
       var user = yield api.action_user_get(userId)
@@ -120,6 +124,26 @@ function setup(plugin, imports, register) {
   ui.onRenderBody((store, children) => {
     if(ui.store.getState().chat.active) children.unshift(render(store))
   })
+
+  settings.onRenderUserSettings((children) => {
+    children.push(renderSetting(ui.store))
+  })
+
+  function renderSetting(store) {
+    var state = store.getState()
+    return h('li.list-group-item', [
+      h('input', {
+        type: 'checkbox'
+      , 'ev-change': evt => {
+          store.dispatch(settings.action_setForUser({
+            'chat:windowSize': evt.currentTarget.checked? 'minimized' : 'full'
+          }))
+        }
+      , attributes: settings.getForUser('chat:windowSize') == 'minimized'? {checked: true} : {}
+      })
+    , 'Keep chat minimized'
+    ])
+  }
 
   function render(store) {
     var state = store.getState().chat
