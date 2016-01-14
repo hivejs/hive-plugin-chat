@@ -131,17 +131,24 @@ function setup(plugin, imports, register) {
 
   function renderSetting(store) {
     var state = store.getState()
-    return h('li.list-group-item', [
-      h('input', {
-        type: 'checkbox'
-      , 'ev-change': evt => {
-          store.dispatch(settings.action_setForUser({
-            'chat:windowSize': evt.currentTarget.checked? 'minimized' : 'full'
-          }))
-        }
-      , attributes: settings.getForUser('chat:windowSize') == 'minimized'? {checked: true} : {}
-      })
-    , 'Keep chat minimized'
+    return h('div', [
+    , h('h4', 'Chat')
+    , h('ul.list-group',
+        h('li.list-group-item', [
+          h('label', [
+            h('input', {
+              type: 'checkbox'
+            , 'ev-change': evt => {
+                store.dispatch(settings.action_setForUser({
+                  'chat:windowSize': evt.currentTarget.checked? 'minimized' : 'full'
+                }))
+              }
+            , attributes: settings.getForUser('chat:windowSize') == 'minimized'? {checked: true} : {}
+            })
+          , ' Keep chat minimized'
+          ])
+        ])
+      )
     ])
   }
 
