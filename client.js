@@ -98,7 +98,7 @@ function setup(plugin, imports, register) {
   }
   ui.reduxMiddleware.push(middleware)
 
-  editor.onLoad((editableDoc, broadcast) => {
+  editor.onLoad((editableDoc, broadcast, onClose) => {
     ui.store.dispatch(chat.action_activate())
 
     // Set up the chat broadcast
@@ -120,9 +120,14 @@ function setup(plugin, imports, register) {
       }
     })
 
-    settings.onChange(_=> {
+    var dispose = settings.onChange(_=> {
       ui.store.dispatch(
         {type: 'CHAT_RESIZE', payload: settings.getForUser('chat:windowSize')})
+    })
+
+    onClose(_=> {
+      chat.stream = null
+      dispose()
     })
   })
 
