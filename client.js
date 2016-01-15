@@ -119,6 +119,11 @@ function setup(plugin, imports, register) {
         ui.store.dispatch(chat.action_addMessage(msg))
       }
     })
+
+    settings.onChange(_=> {
+      ui.store.dispatch(
+        {type: 'CHAT_RESIZE', payload: settings.getForUser('chat:windowSize')})
+    })
   })
 
   ui.onRenderBody((store, children) => {
