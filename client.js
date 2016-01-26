@@ -155,7 +155,7 @@ function setup(plugin, imports, register) {
               }
             , attributes: settings.getForUser('chat:windowSize') == 'minimized'? {checked: true} : {}
             })
-          , ' Keep chat minimized'
+          , ' '+ui._('plugin-chat/setting-keep-minimized')()
           ])
         ])
       )
@@ -178,18 +178,18 @@ function setup(plugin, imports, register) {
     return h('div.Chat__header', [
       h('div.btn-group.Chat__header__controls', [
         h('a.btn.glyphicon.glyphicon-minus', {
-          attributes: {'aria-label':'Minimize chat window'}
+          attributes: {'aria-label':ui._('plugin-chat/minimize')}
         , 'ev-click': evt => store.dispatch(chat.action_resize('minimized'))
         })
       , h('a.btn.glyphicon.glyphicon-pushpin', {
-          attributes: {'aria-label':'Keep chat window open'}
+          attributes: {'aria-label':ui._('plugin-chat/maximize')()}
         , 'ev-click': evt => store.dispatch(chat.action_resize('full'))
         })
       ])
     , h('h5', [
         h('i.glyphicon.glyphicon-comment')
-      , ' Chat '
-      , h('small', 'discuss and inspire')
+      , ' '+ui._('plugin-chat/chat')()+' '
+      , h('small', ui._('plugin-chat/chat-subheading')())
       ])
     ])
   }
@@ -197,11 +197,11 @@ function setup(plugin, imports, register) {
   function renderInterface(store) {
     return h('form.form-inline.Chat__Interface', [
       h('div.input-group',[
-        h('label.sr-only', {attributes:{for: 'message'}}, 'Chat message'),
+        h('label.sr-only', {attributes:{for: 'message'}}, ui._('plugin-chat/message')()),
         h('input.form-control', {attributes:{
             type:'text'
           , name: 'message'
-          , placeholder: 'Chat message'
+          , placeholder: ui._('plugin-chat/message')()
           },
           'ev-keydown': evt => {
           if(evt.keyCode == 13) {
@@ -212,7 +212,7 @@ function setup(plugin, imports, register) {
         }})
       ]),
       h('input.btn.btn-default.btn-block.hidden-md.hidden-lg', {
-        attributes:{type:'submit', value: 'send'}
+        attributes:{type:'submit', value: ui._('plugin-chat/send')()}
       , 'ev-click': evt => {
           evt.preventDefault()
           store.dispatch(chat.action_createMessage(evt.currentTarget.previousSibling.value))

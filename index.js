@@ -30,6 +30,7 @@ function setup(plugin, imports, register) {
 
   ui.registerModule(path.join(__dirname, 'client.js'))
   ui.registerStylesheet(path.join(__dirname, 'css/index.css'))
+  ui.registerLocaleDir(path.join(__dirname, 'locales'))
 
   broadcast.registerChannel(new Buffer('chat'), function(user, docId, clientStream, broadcastStream) {
     // Authorize chat:write

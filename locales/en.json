@@ -1,0 +1,13 @@
+{
+  "en": {
+    "plugin-chat": {
+      "chat": "Chat"
+    , "chat-subheading": "discuss and inspire"
+    , "setting-keep-minimized": "Keep chat minimized"
+    , "minimize": "Minimize chat window"
+    , "maximize": "Keep chat window open"
+    , "message": "Chat message"
+    , "send": "Send"
+    }
+  }
+}
