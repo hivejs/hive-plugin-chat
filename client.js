@@ -44,6 +44,9 @@ function setup(plugin, imports, register) {
     if('CHAT_ACTIVATE' === action.type) {
       return {...state, messages: [], active: true}
     }
+    if('CHAT_DEACTIVATE' === action.type) {
+      return {...state, messages: [], active: false}
+    }
     if('CHAT_ADD_MESSAGE' === action.type) {
       return {...state, messages: state.messages.concat([action.payload])}
     }
@@ -59,6 +62,9 @@ function setup(plugin, imports, register) {
   var chat = {
     action_activate: function() {
       return {type: 'CHAT_ACTIVATE'}
+    }
+  , action_deactivate: function(){
+      return {type: 'CHAT_DEACTIVATE'}
     }
   , action_createMessage: function*(text) {
       var msg = yield {type: 'CHAT_CREATE_MESSAGE', payload: text}
@@ -127,6 +133,7 @@ function setup(plugin, imports, register) {
 
     onClose(_=> {
       chat.stream = null
+      ui.store.dispatch(chat.action_deactivate())
       dispose()
     })
   })
