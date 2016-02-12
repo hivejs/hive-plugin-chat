@@ -1,11 +1,17 @@
 .Chat {
-  float: right;
   height: 100%;
   width: 20%;
   min-width: 5cm;
   max-width: 15cm;
   position: relative;
   background: #fff;
+}
+
+html[dir="ltr"] .Chat {
+  float: right;
+}
+html[dir="rtl"] .Chat {
+  float: left;
 }
 
 .Chat .glyphicon-pushpin {
@@ -17,11 +23,16 @@
     float:none;
     position:absolute;
     bottom:0;
-    right:.5cm;
     height:10cm;
     box-shadow:0 0 10px #777;
     width:7.5cm;
     z-index: 10; /*for good measure, codemirror uses z-index up to 2*/
+  }
+  html[dir="ltr"] .Chat {
+    right:.5cm;
+  }
+  html[dir="rtl"] .Chat {
+    left:.5cm;
   }
   .Chat__messages {
     bottom: calc(2 * 34px) !important;
@@ -45,11 +56,17 @@
   float:none;
   position:absolute;
   bottom:0;
-  right:.5cm;
   height: auto;
   box-shadow:0 0 10px #777;
   z-index:10;
 }
+html[dir="ltr"] .Chat--minimized {
+  right:.5cm;
+}
+html[dir="rtl"] .Chat--minimized {
+  left:.5cm;
+}
+
 .Chat--minimized .Chat__Interface,
 .Chat--minimized .Chat__messages,
 .Chat--minimized .Chat__header small {
@@ -78,9 +95,15 @@
   padding: 0 .2cm;
 }
 
-.Chat__header__controls {
+html[dir="ltr"] .Chat__header__controls {
   position: absolute;
   right: 0;
+  top: 0;
+}
+
+html[dir="rtl"] .Chat__header__controls {
+  position: absolute;
+  left: 0;
   top: 0;
 }
 
