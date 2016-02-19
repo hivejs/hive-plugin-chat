@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chatten",
+		"chat-subheading": "overleggen en inspireren",
+		"setting-keep-minimized": "Chatvenster geminimaliseerd houden",
+		"minimize": "Chatvenster minimaliseren",
+		"maximize": "Chatvenster open houden",
+		"message": "Chatbericht",
+		"send": "Verzenden"
+	}
+}

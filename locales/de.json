@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "Diskutieren und inspirieren",
+		"setting-keep-minimized": "Chat minimiert halten",
+		"minimize": "Chat-Fenster minimieren",
+		"maximize": "Chat-Fenster geöffnet lassen",
+		"message": "Chat-Nachricht",
+		"send": "Senden"
+	}
+}

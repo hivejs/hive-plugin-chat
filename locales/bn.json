@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"plugin-chat": {
+		"chat": "আড্ডা",
+		"chat-subheading": "আলোচনা করুন ও অনুপ্রাণিত হোন",
+		"setting-keep-minimized": "আড্ডা হ্রাসকৃত রাখুন",
+		"minimize": "আড্ডার উইন্ডো হ্রাস করুন",
+		"maximize": "আড্ডার উইন্ডো খোলা রাখুন",
+		"message": "আড্ডার বার্তা",
+		"send": "পাঠান"
+	}
+}

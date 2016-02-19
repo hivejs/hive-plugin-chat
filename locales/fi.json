@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nike"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Keskustelu",
+		"chat-subheading": "keskustele ja innosta",
+		"setting-keep-minimized": "Pidä keskustelu pienennettynä",
+		"minimize": "Pienennä keskustelu",
+		"maximize": "Pidä keskustelu näkyvissä",
+		"message": "Keskusteluviesti",
+		"send": "Lähetä"
+	}
+}

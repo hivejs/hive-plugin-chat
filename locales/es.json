@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "discute e inspira",
+		"setting-keep-minimized": "Mantener el chat minimizado",
+		"minimize": "Minimizar la ventana de chat",
+		"maximize": "Mantener la ventana de chat abierta",
+		"message": "Mensaje de chat",
+		"send": "Enviar"
+	}
+}

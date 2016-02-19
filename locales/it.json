@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "discuti e ispira",
+		"minimize": "Minimizza finestra di chat",
+		"message": "Messaggio chat",
+		"send": "Invia"
+	}
+}

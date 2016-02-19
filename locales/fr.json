@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Discussion",
+		"chat-subheading": "discuter et inspirer",
+		"setting-keep-minimized": "Garder la discussion réduite",
+		"minimize": "Réduire la fenêtre de discussion",
+		"maximize": "Garder la fenêtre de discussion ouverte",
+		"message": "Message de discussion",
+		"send": "Envoyer"
+	}
+}

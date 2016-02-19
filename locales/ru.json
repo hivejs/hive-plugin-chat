@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"chat-subheading": "обсудить и вдохновить",
+		"setting-keep-minimized": "Держать чат свернутым",
+		"minimize": "Минимизировать окно чата",
+		"maximize": "Держать окно чата открытым",
+		"message": "Сообщение в чате",
+		"send": "Отправить"
+	}
+}
