@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sfic"
+		]
+	},
+	"plugin-chat": {
+		"chat": "चैट",
+		"message": "चैट संदेश",
+		"send": "भेजें"
+	}
+}

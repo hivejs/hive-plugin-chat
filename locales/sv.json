@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chatt",
+		"chat-subheading": "diskutera och inspirera",
+		"message": "Chattmeddelande",
+		"send": "Skicka"
+	}
+}
