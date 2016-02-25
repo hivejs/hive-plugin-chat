@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lxlalexlxl"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"chat-subheading": "обговорити і надихнути",
+		"setting-keep-minimized": "Тримати чат згорнутим",
+		"minimize": "Згорнути вікно чату",
+		"maximize": "Тримати вікно чату відкритим",
+		"message": "Повідомлення в чаті",
+		"send": "Надіслати"
+	}
+}

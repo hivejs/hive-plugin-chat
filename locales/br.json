@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gwenn-Ael"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Flap",
+		"setting-keep-minimized": "Mirout ar flapañ bihan",
+		"minimize": "Bihanaat ar prenestr flapañ",
+		"maximize": "Mirout ar prenestr flapañ digor",
+		"message": "Kemennadenn flapañ",
+		"send": "Kas"
+	}
+}

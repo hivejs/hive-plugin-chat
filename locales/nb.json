@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"SuperPotato"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "diskuter og inspirer",
+		"minimize": "Minimer chat-vinduet",
+		"maximize": "Hold chat-vinduet åpent",
+		"message": "Chat melding",
+		"send": "Send"
+	}
+}
