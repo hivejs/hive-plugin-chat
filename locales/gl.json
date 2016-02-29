@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "conversa e inspira",
+		"setting-keep-minimized": "Manter o chat minimizado",
+		"minimize": "Minimizar a pantalla de chat",
+		"maximize": "Mantener a pantalla de chat aberta",
+		"message": "Mensaxe de chat",
+		"send": "Enviar"
+	}
+}

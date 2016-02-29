@@ -7,6 +7,9 @@
 	"plugin-chat": {
 		"chat": "Chatt",
 		"chat-subheading": "diskutera och inspirera",
+		"setting-keep-minimized": "Låt chattfönstret vara minimerat",
+		"minimize": "Minimera chattfönstret",
+		"maximize": "Låt chattfönstret vara öppet",
 		"message": "Chattmeddelande",
 		"send": "Skicka"
 	}
