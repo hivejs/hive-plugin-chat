@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maroen1990"
+		]
+	},
+	"plugin-chat": {
+		"chat": "دردشة",
+		"message": "رسالة دردشة",
+		"send": "أرسل"
+	}
+}

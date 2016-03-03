@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"plugin-chat": {
+		"chat": "{{Identical|Chat}}",
+		"send": "{{Identical|Send}}"
+	}
+}
