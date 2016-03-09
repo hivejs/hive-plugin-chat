@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zygimantus"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Pokalbiai",
+		"chat-subheading": "aptarti ir įkvėpti",
+		"send": "Siųsti"
+	}
+}
