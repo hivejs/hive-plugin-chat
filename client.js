@@ -258,7 +258,7 @@ function setup(plugin, imports, register) {
 
   function renderMessage(state, msg) {
     return h('div.Chat__Message', {attributes:{'data-user': msg.user}}, [
-      h('span.Chat__Message__User', state.users[msg.user].name)
+      h('span.Chat__Message__User', state.users[msg.user].attributes.name)
     , ': '
     , h('span.Chat__Message__Text', msg.text)
     ])
