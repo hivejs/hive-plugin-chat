@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mateon1"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Czat",
+		"chat-subheading": "dyskutuj i inspiruj",
+		"setting-keep-minimized": "Zostaw czat zminimalizowany",
+		"minimize": "Zminimalizuj okno czatu",
+		"maximize": "Zostaw okno czatu otwarte",
+		"message": "Wiadomość czatu",
+		"send": "Wyślij"
+	}
+}
