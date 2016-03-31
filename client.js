@@ -94,6 +94,9 @@ function setup(plugin, imports, register) {
       return Promise.resolve(msg)
     }
     if('CHAT_ADD_MESSAGE' === action.type) {
+      if(store.getState().chat.users[action.payload.user]) {
+        return next(action)
+      }
       // intercept add message actions and load the associated user object
       return store.dispatch(chat.action_loadUser(action.payload.user))
       .then(function() {
