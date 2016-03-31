@@ -21,12 +21,13 @@ var path = require('path')
   , JSONParse = require('json-stream')
 
 module.exports = setup
-module.exports.consumes = ['ui', 'broadcast', 'auth']
+module.exports.consumes = ['ui', 'broadcast', 'auth', 'logger']
 
 function setup(plugin, imports, register) {
   var ui = imports.ui
     , broadcast = imports.broadcast
     , auth = imports.auth
+    , logger = imports.logger.getLogger('plugin-chat')
 
   ui.registerModule(path.join(__dirname, 'client.js'))
   ui.registerStylesheet(path.join(__dirname, 'css/index.css'))
@@ -38,8 +39,14 @@ function setup(plugin, imports, register) {
       var that = this
       co(function*() {
         var authorized = yield auth.authorize(user, 'document/chat:write', {document: docId})
-        if(!authorized) return
-        if(buf.user !== user.id) return
+        if(!authorized) {
+          logger.debug('Dropped chat message because of lack of authorization')
+          return cb()
+        }
+        if(buf.user !== user.id) {
+          logger.debug('Dropped chat the author of the message is not the sender.')
+          return cb()
+        }
         that.push(buf)
       }).then(cb).catch(cb)
     })).pipe(JSONStringify()).pipe(broadcastStream)
@@ -49,7 +56,7 @@ function setup(plugin, imports, register) {
       var that = this
       co(function*() {
         var authorized = yield auth.authorize(user, 'document/chat:read', {document: docId})
-        if(!authorized) return
+        if(!authorized) return cb()
         that.push(buf)
       }).then(cb).catch(cb)
     })).pipe(clientStream)
