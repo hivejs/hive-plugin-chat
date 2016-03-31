@@ -68,9 +68,10 @@ html[dir="rtl"] .Chat--medium {
     display: none;
   }
   
+  .Chat--minimized:hover .Chat__header__controls,
   .Chat--minimized .Chat__header__controls {
     display: none;
-      display: block;}
+  }
 }
 
 .Chat--minimized {

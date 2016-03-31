@@ -3,8 +3,9 @@
     "chat": "Chat"
   , "chat-subheading": "discuss and inspire"
   , "setting-keep-minimized": "Keep chat minimized"
-  , "minimize": "Minimize chat window"
-  , "maximize": "Keep chat window open"
+  , "minimize": "Minimize chat"
+  , "mediumsize": "Make chat medium-size"
+  , "maximize": "Maximize chat"
   , "message": "Chat message"
   , "send": "Send"
   }
