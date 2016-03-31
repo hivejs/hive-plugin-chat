@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Luk3"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Bate-papo",
+		"chat-subheading": "conversar e inspirar",
+		"setting-keep-minimized": "Manter bate-papo minimizado",
+		"minimize": "Minimizar janela de bate-papo",
+		"maximize": "Manter janela de bate-papo aberta",
+		"message": "Mensagem de bate-papo",
+		"send": "Enviar"
+	}
+}
