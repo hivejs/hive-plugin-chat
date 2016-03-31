@@ -14,11 +14,34 @@ html[dir="rtl"] .Chat {
   float: left;
 }
 
-.Chat .glyphicon-pushpin {
-  display:none;
+.Chat .Chat__header__controls {
+  display: none;
+}
+.Chat:hover .Chat__header__controls {
+  display: block;
+}
+
+.Chat--medium {
+  float:none;
+  position:absolute;
+  bottom:0;
+  height:10cm;
+  box-shadow:0 0 10px #777;
+  width:7.5cm;
+  z-index: 10; /*for good measure, codemirror uses z-index up to 2*/
+}
+html[dir="ltr"] .Chat--medium {
+  right:.5cm;
+}
+html[dir="rtl"] .Chat--medium {
+  left:.5cm;
+}
+.Chat--medium .Chat__messages {
+  bottom: calc(2 * 34px) !important;
 }
 
 @media (max-width: 991px) {
+  /*Users on smaller screens only get medium mode -- less would make this more elegant*/
   .Chat {
     float:none;
     position:absolute;
@@ -37,19 +60,17 @@ html[dir="rtl"] .Chat {
   .Chat__messages {
     bottom: calc(2 * 34px) !important;
   }
-}
-
-@media (max-width: 772px) {
-  .Chat--minimized {
-    width: 2cm;
-    min-width: 0;
+  .Chat .Chat__header__controls {
+    display: block;
   }
-  .Chat--minimized .Chat__header__controls {
+  .Chat .Chat__controls__full,
+  .Chat .Chat__controls__medium {
     display: none;
   }
-  .Chat--minimized:hover {
-    width: 7.5cm;
-  }
+  
+  .Chat--minimized .Chat__header__controls {
+    display: none;
+      display: block;}
 }
 
 .Chat--minimized {
@@ -72,23 +93,12 @@ html[dir="rtl"] .Chat--minimized {
 .Chat--minimized .Chat__header small {
   display:none;
 }
-.Chat--minimized .glyphicon-minus{
-  display:none;
-}
-.Chat--minimized .glyphicon-pushpin {
-  display: inline-block;
-}
 
-/* Display chat on hover*/
-.Chat--minimized:hover {
-  height: 10cm;
-}
-.Chat--minimized:hover .Chat__Interface,
-.Chat--minimized:hover .Chat__messages {
-  display: block;
-}
-.Chat--minimized:hover .Chat__header small {
-  display: inline;
+@media (max-width: 772px) {
+  .Chat--minimized {
+    width: 2cm;
+    min-width: 0;
+  }
 }
 
 .Chat__header {

@@ -174,10 +174,12 @@ function setup(plugin, imports, register) {
 
   function render(store) {
     var state = store.getState().chat
-    // set window size
-    var windowSize = state.windowSize == 'minimized'?
-      '.Chat--minimized' : ''
-    return h('div.Chat'+windowSize, [
+    return h('div.Chat.Chat--'+state.windowSize,{
+      'ev-click': (evt) =>
+        state.windowSize=='minimized'?
+          store.dispatch(chat.action_resize('medium'))
+        : null
+    }, [
       renderHeader(store)
     , renderMessages(store)
     , renderInterface(store)
@@ -185,16 +187,21 @@ function setup(plugin, imports, register) {
   }
 
   function renderHeader(store) {
+    var state = store.getState().chat
     return h('div.Chat__header', [
       h('div.btn-group.Chat__header__controls', [
-        h('a.btn.glyphicon.glyphicon-minus', {
+        h('a.btn.Chat__controls__minimize', {
           attributes: {'aria-label':ui._('plugin-chat/minimize')}
         , 'ev-click': evt => store.dispatch(chat.action_resize('minimized'))
-        })
-      , h('a.btn.glyphicon.glyphicon-pushpin', {
-          attributes: {'aria-label':ui._('plugin-chat/maximize')()}
+        },h('i.glyphicon.glyphicon-minus'))
+      , h('a.btn.Chat__controls__medium'+(state.windowSize=='medium'? '.active' : ''), {
+          attributes: {'aria-label':ui._('plugin-chat/mediumsize')(), 'aria-pressed': (state.windowSize=='medium'? 'true' : 'false')}
+        , 'ev-click': evt => store.dispatch(chat.action_resize('medium'))
+        }, h('i.glyphicon.glyphicon-resize-small'))
+      , h('a.btn.Chat__controls__full'+(state.windowSize=='full'? '.active' : ''), {
+          attributes: {'aria-label':ui._('plugin-chat/maximize')(), 'aria-pressed': (state.windowSize=='full'? 'true' : 'false')}
         , 'ev-click': evt => store.dispatch(chat.action_resize('full'))
-        })
+        }, h('i.glyphicon.glyphicon-resize-full'))
       ])
     , h('h5', [
         h('i.glyphicon.glyphicon-comment')
