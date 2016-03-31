@@ -43,7 +43,7 @@ function setup(plugin, imports, register) {
           logger.debug('Dropped chat message because of lack of authorization')
           return cb()
         }
-        if(buf.user !== user.id) {
+        if(buf.user != user.id) {
           logger.debug('Dropped chat the author of the message is not the sender.')
           return cb()
         }
