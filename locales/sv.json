@@ -8,8 +8,9 @@
 		"chat": "Chatt",
 		"chat-subheading": "diskutera och inspirera",
 		"setting-keep-minimized": "Låt chattfönstret vara minimerat",
-		"minimize": "Minimera chattfönstret",
-		"maximize": "Låt chattfönstret vara öppet",
+		"minimize": "Minimera chatt",
+		"mediumsize": "Gör chatten mellanstor",
+		"maximize": "Maximera chatt",
 		"message": "Chattmeddelande",
 		"send": "Skicka"
 	}

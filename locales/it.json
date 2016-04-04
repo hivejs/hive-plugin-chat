@@ -7,7 +7,9 @@
 	"plugin-chat": {
 		"chat": "Chat",
 		"chat-subheading": "discuti e ispira",
-		"minimize": "Minimizza finestra di chat",
+		"minimize": "Minimizza chat",
+		"mediumsize": "Chat di medie dimensioni",
+		"maximize": "Massimizza chat",
 		"message": "Messaggio chat",
 		"send": "Invia"
 	}

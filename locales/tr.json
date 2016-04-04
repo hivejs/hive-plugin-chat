@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hbseren"
+		]
+	},
+	"plugin-chat": {
+		"minimize": "Sohbet ekranını küçült",
+		"mediumsize": "Sohbet ekranını orta büyüklüğe getir",
+		"maximize": "Sohbet ekranını büyüt"
+	}
+}

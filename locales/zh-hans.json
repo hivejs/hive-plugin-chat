@@ -8,8 +8,9 @@
 		"chat": "聊天",
 		"chat-subheading": "讨论与鼓舞",
 		"setting-keep-minimized": "保持聊天最小化",
-		"minimize": "最小化聊天窗口",
-		"maximize": "保持聊天窗口打开",
+		"minimize": "最小化聊天",
+		"mediumsize": "使聊天适中",
+		"maximize": "最大化聊天",
 		"message": "聊天消息",
 		"send": "发送"
 	}

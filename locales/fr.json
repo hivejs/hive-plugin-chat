@@ -8,8 +8,9 @@
 		"chat": "Discussion",
 		"chat-subheading": "discuter et inspirer",
 		"setting-keep-minimized": "Garder la discussion réduite",
-		"minimize": "Réduire la fenêtre de discussion",
-		"maximize": "Garder la fenêtre de discussion ouverte",
+		"minimize": "Réduire la discussion",
+		"mediumsize": "Donner une taille moyenne à la discussion",
+		"maximize": "Augmenter la discussion au maximum",
 		"message": "Message de discussion",
 		"send": "Envoyer"
 	}
