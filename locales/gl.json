@@ -8,8 +8,9 @@
 		"chat": "Chat",
 		"chat-subheading": "conversa e inspira",
 		"setting-keep-minimized": "Manter o chat minimizado",
-		"minimize": "Minimizar a pantalla de chat",
-		"maximize": "Mantener a pantalla de chat aberta",
+		"minimize": "Minimizar o chat",
+		"mediumsize": "Chat de tamaño mediano",
+		"maximize": "Maximizar o chat",
 		"message": "Mensaxe de chat",
 		"send": "Enviar"
 	}

@@ -8,8 +8,9 @@
 		"chat": "Bate-papo",
 		"chat-subheading": "conversar e inspirar",
 		"setting-keep-minimized": "Manter bate-papo minimizado",
-		"minimize": "Minimizar janela de bate-papo",
-		"maximize": "Manter janela de bate-papo aberta",
+		"minimize": "Minimizar bate-papo",
+		"mediumsize": "Tornar o bate-papo em tamanho médio",
+		"maximize": "Maximizar o bate-papo",
 		"message": "Mensagem de bate-papo",
 		"send": "Enviar"
 	}
