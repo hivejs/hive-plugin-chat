@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wolf Rex"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Csevegés",
+		"message": "Üzenet",
+		"send": "Küldés"
+	}
+}
