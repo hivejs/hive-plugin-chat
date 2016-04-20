@@ -255,7 +255,11 @@ function setup(plugin, imports, register) {
     this.scrollHeight
   }
   ScrollHook.prototype.hook = function(node, propName, previous) {
-    if(previous && node.scrollTop < previous.scrollHeight-node.clientHeight) {
+    // scrollHeight is the full height that the content would need
+    // clientHeight is the height that is actually available
+
+    // we give a 10px margin here to account for any weirdness that might be going on
+    if(previous && node.scrollTop+10 < previous.scrollHeight-node.clientHeight) {
       this.scrollHeight = node.scrollHeight
       return
     }else{
