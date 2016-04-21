@@ -7,6 +7,7 @@
 	"plugin-chat": {
 		"chat": "Chat",
 		"chat-subheading": "discuti e ispira",
+		"setting-keep-minimized": "Mantieni chat minimizzata",
 		"minimize": "Minimizza chat",
 		"mediumsize": "Chat di medie dimensioni",
 		"maximize": "Massimizza chat",

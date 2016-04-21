@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Siebrand",
-			"Lemondoge"
+			"Lemondoge",
+			"Jeleniccz"
 		]
 	},
 	"plugin-chat": {
@@ -10,8 +11,8 @@
 		"chat-subheading": "overleggen en inspireren",
 		"setting-keep-minimized": "Chatvenster geminimaliseerd houden",
 		"minimize": "Chatvenster minimaliseren",
-		"mediumsize": "Het maken van chat-medium-grootte",
-		"maximize": "Chatvenster open houden",
+		"mediumsize": "Chat van gemiddelde afmetingen maken",
+		"maximize": "Chatvenster maximaliseren",
 		"message": "Chatbericht",
 		"send": "Verzenden"
 	}
