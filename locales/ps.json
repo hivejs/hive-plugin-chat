@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"plugin-chat": {
+		"chat": "بانډار",
+		"message": "بانډار پيغام",
+		"send": "لېږل"
+	}
+}
