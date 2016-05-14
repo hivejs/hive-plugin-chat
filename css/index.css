@@ -21,6 +21,7 @@
   max-width: 15cm;
   position: relative;
   background: #fff;
+  border: 1px #aaa solid;
 }
 
 html[dir="ltr"] .Chat {
