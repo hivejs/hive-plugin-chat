@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"plugin-chat": {
+		"chat": "대화",
+		"setting-keep-minimized": "대화창 최소화 유지",
+		"minimize": "대화창 최소화",
+		"mediumsize": "대화창을 중간 크기로 설정",
+		"maximize": "대화창 최대화",
+		"message": "대화 메시지",
+		"send": "보내기"
+	}
+}
