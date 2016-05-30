@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Schätt",
+		"chat-subheading": "klaafe un aanrähje <!-- https://translatewiki.net/wiki/Thread:Support/About_Hivejs:plugin-chat/chat-subheading/ksh -->",
+		"setting-keep-minimized": "Schätt kleijn lohße",
+		"minimize": "Schätt kleijn maache",
+		"mediumsize": "Schätt meddeljruhß maache",
+		"maximize": "Schätt jruhß maache",
+		"message": "Schätt-Nohreesch",
+		"send": "Avschecke"
+	}
+}
