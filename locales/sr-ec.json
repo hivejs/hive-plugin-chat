@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rancher"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Ћаскање",
+		"chat-subheading": "разговор и инспирација",
+		"setting-keep-minimized": "Задржи ћаскање умањеним",
+		"minimize": "Умањи ћаскање",
+		"mediumsize": "Отвори ћаскање у средњој величини",
+		"maximize": "Увећај ћаскање",
+		"message": "Порука",
+		"send": "Пошаљи"
+	}
+}
