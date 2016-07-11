@@ -6,9 +6,11 @@
 	},
 	"plugin-chat": {
 		"chat": "Flap",
+		"chat-subheading": "divizout hag awenañ",
 		"setting-keep-minimized": "Mirout ar flapañ bihan",
 		"minimize": "Bihanaat ar prenestr flapañ",
-		"maximize": "Mirout ar prenestr flapañ digor",
+		"mediumsize": "Reiñ ur ment etre d'ar prenestr flapañ",
+		"maximize": "Kreskiñ ar prenestr flapañ digor",
 		"message": "Kemennadenn flapañ",
 		"send": "Kas"
 	}
