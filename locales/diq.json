@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kumkumuk",
+			"Marmase"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Mıhebet",
+		"chat-subheading": "İlham u vaten",
+		"minimize": "Mıhebeti kılm ke",
+		"mediumsize": "Mıhebeti werte ebat ke",
+		"maximize": "Mıhebeti hera ke",
+		"message": "Mıhebeta mesaci",
+		"send": "Bırışe"
+	}
+}

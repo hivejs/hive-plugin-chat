@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"plugin-chat": {
+		"chat": "聊天",
+		"message": "聊天訊息",
+		"send": "寄送"
+	}
+}
