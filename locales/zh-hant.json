@@ -6,6 +6,7 @@
 	},
 	"plugin-chat": {
 		"chat": "聊天",
+		"chat-subheading": "討論與鼓勵",
 		"message": "聊天訊息",
 		"send": "寄送"
 	}

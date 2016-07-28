@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib"
+		]
+	},
+	"plugin-chat": {
+		"chat": "چیٹ",
+		"chat-subheading": "گفتگو اور حوصلہ افزائی کریں",
+		"setting-keep-minimized": "چیٹ کے دریچہ کو چھوٹا رکھیں",
+		"minimize": "چیٹ کے دریچہ کو چھوٹا کریں",
+		"mediumsize": "چیٹ کا دریچہ درمیانہ کریں",
+		"maximize": "چیٹ کا دریچہ بڑا کریں",
+		"message": "چیٹ پیغام",
+		"send": "روانہ کریں"
+	}
+}
