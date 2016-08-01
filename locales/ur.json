@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Muhammad Shuaib"
+			"Muhammad Shuaib",
+			"امین اکبر"
 		]
 	},
 	"plugin-chat": {
@@ -9,7 +10,7 @@
 		"chat-subheading": "گفتگو اور حوصلہ افزائی کریں",
 		"setting-keep-minimized": "چیٹ کے دریچہ کو چھوٹا رکھیں",
 		"minimize": "چیٹ کے دریچہ کو چھوٹا کریں",
-		"mediumsize": "چیٹ کا دریچہ درمیانہ کریں",
+		"mediumsize": "چیٹ کا دریچہ درمیانے سائز کا کریں",
 		"maximize": "چیٹ کا دریچہ بڑا کریں",
 		"message": "چیٹ پیغام",
 		"send": "روانہ کریں"

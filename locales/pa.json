@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tow"
+		]
+	},
+	"plugin-chat": {
+		"chat": "ਗੱਲਬਾਤ",
+		"setting-keep-minimized": "ਗੱਲਬਾਤ ਘੱਟ ਰੱਖੋ",
+		"minimize": "ਗੱਲਬਾਤ ਘਟਾਓ",
+		"maximize": "ਗੱਲਬਾਤ ਵਧਾਓ",
+		"message": "ਗੱਲਬਾਤ ਸੁਨੇਹਾ",
+		"send": "ਭੇਜੋ"
+	}
+}

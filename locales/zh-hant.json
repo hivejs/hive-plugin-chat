@@ -7,6 +7,10 @@
 	"plugin-chat": {
 		"chat": "聊天",
 		"chat-subheading": "討論與鼓勵",
+		"setting-keep-minimized": "保持聊天框最小化",
+		"minimize": "聊天框最小化",
+		"mediumsize": "將聊天框適中",
+		"maximize": "聊天框最大化",
 		"message": "聊天訊息",
 		"send": "寄送"
 	}
