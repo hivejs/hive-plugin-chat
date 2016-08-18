@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aktron",
+			"Zbyso23"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "diskutovat a inspirovat",
+		"setting-keep-minimized": "Mějte chat minimalizovaný",
+		"minimize": "Minimalizovat chat",
+		"maximize": "Maximalizovat chat",
+		"message": "Zpráva chatu",
+		"send": "Odeslat"
+	}
+}
