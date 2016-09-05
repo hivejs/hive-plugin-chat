@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pon44695"
+		]
+	},
+	"plugin-chat": {
+		"chat": "สนทนา",
+		"chat-subheading": "แลกเปลี่ยนและหาแรงบันดาลใจ",
+		"setting-keep-minimized": "ย่อขนาดสนทนาเก็บลง",
+		"minimize": "ย่อการสนทนา",
+		"mediumsize": "ทำการสนทนาขนาดกลาง",
+		"maximize": "การสนทนาขนาดใหญ่ที่สุด",
+		"message": "ข้อความสนทนา",
+		"send": "ส่ง"
+	}
+}
