@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "alderica ya inspira",
+		"setting-keep-minimized": "Caltener el chat embrivíu",
+		"minimize": "Embrivir el chat",
+		"mediumsize": "Chat de tamañu medianu",
+		"maximize": "Maximizar el chat",
+		"message": "Mensaxe de chat",
+		"send": "Unviar"
+	}
+}

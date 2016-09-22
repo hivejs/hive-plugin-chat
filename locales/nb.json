@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"SuperPotato"
+			"SuperPotato",
+			"Jon Harald Søby"
 		]
 	},
 	"plugin-chat": {
@@ -9,6 +10,7 @@
 		"chat-subheading": "diskuter og inspirer",
 		"setting-keep-minimized": "Hold chat minimert",
 		"minimize": "Minimer chat",
+		"mediumsize": "Gjør chatten mellomstor",
 		"maximize": "Maksimer chat",
 		"message": "Chat melding",
 		"send": "Send"
