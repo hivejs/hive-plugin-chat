@@ -1,11 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Maroen1990"
+			"Maroen1990",
+			"ديفيد"
 		]
 	},
 	"plugin-chat": {
 		"chat": "دردشة",
+		"setting-keep-minimized": "إبقاء الحد الأدنى للدردشة",
+		"minimize": "تقليل الدردشة",
+		"mediumsize": "جعل الدردشة متوسطة الحجم",
+		"maximize": "تكبير الدردشة",
 		"message": "رسالة دردشة",
 		"send": "أرسل"
 	}
