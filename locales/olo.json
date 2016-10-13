@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilja.mos"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Čattu",
+		"setting-keep-minimized": "Pie čattu pienendettynny",
+		"minimize": "Pienendä čattu",
+		"mediumsize": "Avua čattu keskisuures ikkunas",
+		"maximize": "Avua čattu kogo ikkunan suuruzekse",
+		"message": "Čattuviesti",
+		"send": "Työnnä"
+	}
+}
