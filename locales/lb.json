@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "diskutéieren an inspiréieren",
+		"message": "Chat-Message",
+		"send": "Schécken"
+	}
+}
