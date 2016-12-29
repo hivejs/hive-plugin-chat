@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mateon1",
-			"Chrumps"
+			"Chrumps",
+			"Woytecr"
 		]
 	},
 	"plugin-chat": {
@@ -10,7 +11,7 @@
 		"chat-subheading": "dyskutuj i inspiruj",
 		"setting-keep-minimized": "Zostaw czat zminimalizowany",
 		"minimize": "Zminimalizuj czat",
-		"mediumsize": "Nadaj czatu średni rozmiar",
+		"mediumsize": "Nadaj czatowi średni rozmiar",
 		"maximize": "Zmaksymalizuj czat",
 		"message": "Wiadomość czatu",
 		"send": "Wyślij"
