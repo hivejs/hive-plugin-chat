@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Jerrykim306"
 		]
 	},
 	"plugin-chat": {
 		"chat": "대화",
+		"chat-subheading": "토론과 영감을 주기",
 		"setting-keep-minimized": "대화창 최소화 유지",
 		"minimize": "대화창 최소화",
 		"mediumsize": "대화창을 중간 크기로 설정",
