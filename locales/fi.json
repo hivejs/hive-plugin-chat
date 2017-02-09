@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nike"
+			"Nike",
+			"Pyscowicz"
 		]
 	},
 	"plugin-chat": {
@@ -9,7 +10,8 @@
 		"chat-subheading": "keskustele ja innosta",
 		"setting-keep-minimized": "Pidä keskustelu pienennettynä",
 		"minimize": "Pienennä keskustelu",
-		"maximize": "Pidä keskustelu näkyvissä",
+		"mediumsize": "Tee keskustelusta keskikokoinen",
+		"maximize": "Suurenna keskustelu",
 		"message": "Keskusteluviesti",
 		"send": "Lähetä"
 	}
