@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Resaka",
+		"chat-subheading": "hifanakalo hevitra",
+		"setting-keep-minimized": "Tazomy ho kely ny resaka mivantana",
+		"minimize": "Atao ho kely ny haben'ny resaka mivantana",
+		"mediumsize": "Atao antonontonony ny haben'ny resaka mivantana",
+		"maximize": "Atao faran'izay lehibe ny haben'ny resaka mivantana",
+		"message": "Hafatry ny resaka mivantana",
+		"send": "Alefa"
+	}
+}
