@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"minimize": "Минимизиране на чата",
+		"message": "Съобщение в чата"
+	}
+}
