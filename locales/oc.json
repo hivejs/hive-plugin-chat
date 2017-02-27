@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Discussion",
+		"minimize": "Reduire la discussion",
+		"maximize": "Aumentar la discussion al maximum",
+		"message": "Messatge de discussion",
+		"send": "Mandar"
+	}
+}
