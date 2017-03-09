@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hidayatsrf"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Obrolan",
+		"minimize": "Perkecil obrolan",
+		"maximize": "Perbesar obrolan",
+		"message": "Pesan obrolan",
+		"send": "Kirim"
+	}
+}
