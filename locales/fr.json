@@ -1,16 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
 	"plugin-chat": {
-		"chat": "Discussion",
+		"chat": "Clavardage",
 		"chat-subheading": "discuter et inspirer",
-		"setting-keep-minimized": "Garder la discussion réduite",
-		"minimize": "Réduire la discussion",
-		"mediumsize": "Donner une taille moyenne à la discussion",
-		"maximize": "Augmenter la discussion au maximum",
+		"setting-keep-minimized": "Garder le clavardage réduit",
+		"minimize": "Réduire le clavardage",
+		"mediumsize": "Donner une taille moyenne au clavardage",
+		"maximize": "Augmenter le clavardage au maximum",
 		"message": "Message de discussion",
 		"send": "Envoyer"
 	}
