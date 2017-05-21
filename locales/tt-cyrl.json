@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marat-avgust"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"setting-keep-minimized": "Чатны ябык килеш тоту",
+		"minimize": "Чатны ябу",
+		"mediumsize": "Урта үлчәмдәге чат ачу",
+		"send": "Җибәрү"
+	}
+}

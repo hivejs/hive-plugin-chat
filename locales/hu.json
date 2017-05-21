@@ -1,11 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wolf Rex"
+			"Wolf Rex",
+			"Urbalazs"
 		]
 	},
 	"plugin-chat": {
 		"chat": "Csevegés",
+		"chat-subheading": "beszélgessen és inspiráljon",
+		"setting-keep-minimized": "Csevegés minimalizáltan tartása",
+		"minimize": "Csevegés minimalizálása",
+		"mediumsize": "Csevegés közepes méretűvé tétele",
+		"maximize": "Csevegés maximalizálása",
 		"message": "Üzenet",
 		"send": "Küldés"
 	}
