@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srdjan m"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Ćaskanje",
+		"minimize": "Umanji ćaskanje",
+		"mediumsize": "Otvori ćaskanje u srednjoj veličini",
+		"maximize": "Uvećaj ćaskanje",
+		"message": "Poruka",
+		"send": "Pošalji"
+	}
+}
