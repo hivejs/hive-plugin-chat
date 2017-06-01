@@ -6,6 +6,8 @@
 	},
 	"plugin-chat": {
 		"chat": "Ćaskanje",
+		"chat-subheading": "raspravljajte i inspirirajte",
+		"setting-keep-minimized": "Zadrži ćaskanje umanjenim",
 		"minimize": "Umanji ćaskanje",
 		"mediumsize": "Otvori ćaskanje u srednjoj veličini",
 		"maximize": "Uvećaj ćaskanje",
