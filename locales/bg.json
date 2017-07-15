@@ -1,12 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"StanProg"
+			"StanProg",
+			"Vodnokon4e"
 		]
 	},
 	"plugin-chat": {
 		"chat": "Чат",
+		"chat-subheading": "обсъждане и вдъхновение",
+		"setting-keep-minimized": "Дръжте чата минимизиран",
 		"minimize": "Минимизиране на чата",
+		"mediumsize": "Направете чата в средна големина",
 		"maximize": "Максимизиране на чата",
 		"message": "Съобщение в чата",
 		"send": "Изпращане"
