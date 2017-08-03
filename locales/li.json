@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"chat-subheading": "euverlègk en inspireer",
+		"setting-keep-minimized": "Haaj 't chatvinster klein",
+		"minimize": "Maak 't chatvinster klein",
+		"mediumsize": "Maak 't chatvinster normaal",
+		"maximize": "Maak 't chatvinster groeat",
+		"message": "Chatbesjeid",
+		"send": "Sjik"
+	}
+}

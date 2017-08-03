@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Belkacem77"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Asqerdec",
+		"chat-subheading": "meslay u mudd tiktiwin",
+		"setting-keep-minimized": "Eǧǧ asqerdec yefneẓ",
+		"minimize": "Fneẓ asqerdec",
+		"mediumsize": "Mudd teɣzi talemmast n isqerdec",
+		"maximize": "Semɣeṛ asqerdec",
+		"message": "Izen n usqerdec",
+		"send": "Azen"
+	}
+}
