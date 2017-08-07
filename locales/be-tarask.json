@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"chat-subheading": "абмеркаваць і натхніць",
+		"setting-keep-minimized": "Трымаць чат згорнутым",
+		"minimize": "Згарнуць чат"
+	}
+}
