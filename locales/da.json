@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Snak (chat)",
+		"chat-subheading": "diskuter og inspirer",
+		"setting-keep-minimized": "Hold snak (chat) minimeret",
+		"minimize": "Minimer snak (chat)",
+		"mediumsize": "Hold snak (chat) i mellemstr.",
+		"maximize": "Maksimer snak (chat)",
+		"message": "Snakkebesked",
+		"send": "Send"
+	}
+}
