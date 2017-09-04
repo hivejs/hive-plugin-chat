@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mikel Ibaiba",
+			"Subi"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Txat",
+		"chat-subheading": "Eztabaidatu eta inspiratu",
+		"setting-keep-minimized": "Txata minimizatuta mantendu",
+		"minimize": "Txata minimizatu",
+		"mediumsize": "Txata tamaina erdikoa bihurtu",
+		"maximize": "Txata maximizatu",
+		"message": "Txat mezua",
+		"send": "Bidali"
+	}
+}
