@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Συνομιλία",
+		"chat-subheading": "συζητήστε και εμπνεύστε",
+		"setting-keep-minimized": "Διατηρήστε την συνομιλία ελαχιστοποιημένη",
+		"minimize": "Ελαχιστοποίηση συνομιλίας",
+		"mediumsize": "Ορίστε την συνομιλία σε μεσαίο μέγεθος",
+		"maximize": "Μεγιστοποίηση συνομιλίας",
+		"message": "Μήνυμα συνομιλίας",
+		"send": "Αποστολή"
+	}
+}

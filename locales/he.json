@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"YaronSh"
+		]
+	},
+	"plugin-chat": {
+		"chat": "צ׳אט",
+		"setting-keep-minimized": "להשאיר את הצ׳אט ממוזער",
+		"minimize": "מזעור הצ׳אט‎",
+		"mediumsize": "שינוי גודל הצ׳אט לבינוני",
+		"maximize": "הגדלת הצ׳אט",
+		"message": "הודעה בצ׳אט",
+		"send": "שליחה"
+	}
+}
