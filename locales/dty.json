@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirajan pant"
+		]
+	},
+	"plugin-chat": {
+		"chat": "कुरणिकाआनी",
+		"message": "च्याट सन्देश",
+		"send": "पठाः"
+	}
+}
