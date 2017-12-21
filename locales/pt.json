@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Athena in Wonderland"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Conversação",
+		"chat-subheading": "conversar e inspirar",
+		"setting-keep-minimized": "Manter conversação minimizada",
+		"minimize": "Minimizar conversação",
+		"mediumsize": "Tornar a conversação no tamanho médio",
+		"maximize": "Maximizar a conversação",
+		"message": "Mensagem da conversação",
+		"send": "Enviar"
+	}
+}
