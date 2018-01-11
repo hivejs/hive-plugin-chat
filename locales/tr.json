@@ -1,12 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hbseren"
+			"Hbseren",
+			"Chansey"
 		]
 	},
 	"plugin-chat": {
+		"chat": "Sohbet",
+		"chat-subheading": "tartış ve esinlen",
+		"setting-keep-minimized": "Sohbeti küçült",
 		"minimize": "Sohbet ekranını küçült",
 		"mediumsize": "Sohbet ekranını orta büyüklüğe getir",
-		"maximize": "Sohbet ekranını büyüt"
+		"maximize": "Sohbet ekranını büyüt",
+		"message": "Sohbet iletisi",
+		"send": "Gönder"
 	}
 }
