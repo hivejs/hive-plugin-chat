@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"AzorAhai"
+		]
+	},
+	"plugin-chat": {
+		"chat": "گفتگو",
+		"send": "ارسال"
+	}
+}

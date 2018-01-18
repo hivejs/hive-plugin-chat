@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ibrahim khashrowdi"
+		]
+	},
+	"plugin-chat": {
+		"chat": "چت وهبر",
+		"send": "دیم داتین"
+	}
+}

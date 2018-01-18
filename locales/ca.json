@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Xat",
+		"send": "Envia"
+	}
+}

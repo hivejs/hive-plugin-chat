@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alp Er Tunqa"
+		]
+	},
+	"plugin-chat": {
+		"chat": "چت",
+		"send": "گؤندر"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saraiki"
+		]
+	},
+	"plugin-chat": {
+		"chat": "چیٹ",
+		"send": "بھیجو"
+	}
+}
