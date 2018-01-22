@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rancher"
+			"Rancher",
+			"Acamicamacaraca"
 		]
 	},
 	"plugin-chat": {
 		"chat": "Ћаскање",
 		"chat-subheading": "разговор и инспирација",
-		"setting-keep-minimized": "Задржи ћаскање умањеним",
+		"setting-keep-minimized": "Задржи ћаскање умањено",
 		"minimize": "Умањи ћаскање",
 		"mediumsize": "Отвори ћаскање у средњој величини",
 		"maximize": "Увећај ћаскање",
