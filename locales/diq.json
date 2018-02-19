@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Kumkumuk",
-			"Marmase"
+			"Marmase",
+			"Mirzali"
 		]
 	},
 	"plugin-chat": {
 		"chat": "Mıhebet",
-		"chat-subheading": "İlham u vaten",
+		"chat-subheading": "werêne u ilham bıgê",
 		"setting-keep-minimized": "Mıhebeti werdı tepêş",
 		"minimize": "Mıhebeti kılm ke",
 		"mediumsize": "Mıhebeti werte ebat ke",
