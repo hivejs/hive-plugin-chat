@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sureshkhole"
+		]
+	},
+	"plugin-chat": {
+		"chat": "गप्पा",
+		"send": "पाठवा"
+	}
+}
