@@ -9,6 +9,7 @@
 	"plugin-chat": {
 		"chat": "チャット",
 		"setting-keep-minimized": "チャットを最小限に抑える",
+		"minimize": "チャットを最小限に抑える",
 		"message": "チャットメッセージ",
 		"send": "送信"
 	}
