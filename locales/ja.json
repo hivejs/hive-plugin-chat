@@ -3,13 +3,17 @@
 		"authors": [
 			"Otokoume",
 			"Sujiniku",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Omotecho"
 		]
 	},
 	"plugin-chat": {
 		"chat": "チャット",
+		"chat-subheading": "議論をして発想を広げよう",
 		"setting-keep-minimized": "チャットを最小限に抑える",
 		"minimize": "チャットを最小限に抑える",
+		"mediumsize": "チャットを中程度に調整",
+		"maximize": "チャットを無制限にする",
 		"message": "チャットメッセージ",
 		"send": "送信"
 	}
