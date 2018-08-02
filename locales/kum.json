@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"ArslanX"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Чат",
+		"send": "Йибермек"
+	}
+}
