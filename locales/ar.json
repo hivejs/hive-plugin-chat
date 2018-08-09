@@ -7,6 +7,7 @@
 	},
 	"plugin-chat": {
 		"chat": "دردشة",
+		"chat-subheading": "مناقشة وإلهام",
 		"setting-keep-minimized": "إبقاء الحد الأدنى للدردشة",
 		"minimize": "تقليل الدردشة",
 		"mediumsize": "جعل الدردشة متوسطة الحجم",
