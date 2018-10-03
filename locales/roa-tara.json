@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Ciat",
+		"chat-subheading": "'ngazzate e ispire",
+		"setting-keep-minimized": "Mandìne 'a ciat avasciate.",
+		"minimize": "Avasce 'a ciat",
+		"mediumsize": "Ciat de dimenziune medie",
+		"maximize": "Allarije 'a ciat",
+		"message": "Messàgge d'a ciat",
+		"send": "Manne"
+	}
+}
