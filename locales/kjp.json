@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rul1902"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Chat",
+		"send": "သုံ့"
+	}
+}
