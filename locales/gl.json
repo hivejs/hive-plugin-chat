@@ -1,17 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Navhy"
 		]
 	},
 	"plugin-chat": {
-		"chat": "Chat",
+		"chat": "Conversa",
 		"chat-subheading": "conversa e inspira",
-		"setting-keep-minimized": "Manter o chat minimizado",
-		"minimize": "Minimizar o chat",
-		"mediumsize": "Chat de tamaño mediano",
-		"maximize": "Maximizar o chat",
-		"message": "Mensaxe de chat",
+		"setting-keep-minimized": "Manter a conversa minimizada",
+		"minimize": "Minimizar a conversa",
+		"mediumsize": "Conversa de tamaño mediano",
+		"maximize": "Maximizar a conversa",
+		"message": "Mensaxe de conversa",
 		"send": "Enviar"
 	}
 }
