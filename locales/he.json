@@ -6,6 +6,7 @@
 	},
 	"plugin-chat": {
 		"chat": "צ׳אט",
+		"chat-subheading": "לדון ולהשפיע",
 		"setting-keep-minimized": "להשאיר את הצ׳אט ממוזער",
 		"minimize": "מזעור הצ׳אט‎",
 		"mediumsize": "שינוי גודל הצ׳אט לבינוני",
