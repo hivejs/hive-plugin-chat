@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin",
+			"Robin van der Vliet"
+		]
+	},
+	"plugin-chat": {
+		"chat": "Babili",
+		"chat-subheading": "diskuti kaj inspiri",
+		"setting-keep-minimized": "Teni babilejon minimumigita",
+		"minimize": "Minimumigi babilejon",
+		"mediumsize": "Mezgrandigi babilejon",
+		"maximize": "Maksimumigi babilejon",
+		"message": "Babila mesaĝo",
+		"send": "Sendi"
+	}
+}
